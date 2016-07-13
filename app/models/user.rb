@@ -9,5 +9,9 @@ class User < ActiveRecord::Base
             format:{
                 with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
             }
+
+  validates :password, :presence => true,
+                   :confirmation => true,
+                   :length => {:within => 6..40}
   
 end
