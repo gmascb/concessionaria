@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    if !current_user
+      redirect_to root_url
+    else
+     @users = User.all
+   end
   end
 
   # GET /users/1

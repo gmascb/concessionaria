@@ -1,0 +1,65 @@
+<%= form_for(@ficha) do |f| %>
+  <% if @ficha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha.errors.count, "error") %> prohibited this ficha from being saved:</h2>
+
+      <ul>
+      <% @ficha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :Vendedor_id %><br>
+    <%= f.text_field :Vendedor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Banco_id %><br>
+    <%= f.text_field :Banco_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipopfin %><br>
+    <%= f.text_field :tipopfin %>
+  </div>
+  <div class="field">
+    <%= f.label :coef %><br>
+    <%= f.text_field :coef %>
+  </div>
+  <div class="field">
+    <%= f.label :valfinanceiro %><br>
+    <%= f.text_field :valfinanceiro %>
+  </div>
+  <div class="field">
+    <%= f.label :numparcelas %><br>
+    <%= f.text_field :numparcelas %>
+  </div>
+  <div class="field">
+    <%= f.label :valorparcela %><br>
+    <%= f.text_field :valorparcela %>
+  </div>
+  <div class="field">
+    <%= f.label :valortotal %><br>
+    <%= f.text_field :valortotal %>
+  </div>
+  <div class="field">
+    <%= f.label :Customer_id %><br>
+    <%= f.text_field :Customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Cars_id %><br>
+    <%= f.text_field :Cars_id %>
+  </div>
+  <div class="field">
+    <%= f.label :MeioPagamento_id %><br>
+    <%= f.text_field :MeioPagamento_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

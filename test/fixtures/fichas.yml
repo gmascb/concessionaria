@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2016-07-20
+  Vendedor_id: 
+  Banco_id: 
+  tipopfin: 
+  coef: MyString
+  valfinanceiro: 9.99
+  numparcelas: 
+  valorparcela: 9.99
+  valortotal: 9.99
+  Customer_id: 
+  Cars_id: 
+  MeioPagamento_id: 
+
+two:
+  data: 2016-07-20
+  Vendedor_id: 
+  Banco_id: 
+  tipopfin: 
+  coef: MyString
+  valfinanceiro: 9.99
+  numparcelas: 
+  valorparcela: 9.99
+  valortotal: 9.99
+  Customer_id: 
+  Cars_id: 
+  MeioPagamento_id: 

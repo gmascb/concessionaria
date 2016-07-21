@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numerodocumento:</strong>
+  <%= @nf_venda.numerodocumento %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @nf_venda.valor %>
+</p>
+
+<p>
+  <strong>Desconto:</strong>
+  <%= @nf_venda.desconto %>
+</p>
+
+<p>
+  <strong>Acrescimo:</strong>
+  <%= @nf_venda.acrescimo %>
+</p>
+
+<p>
+  <strong>Ficha:</strong>
+  <%= @nf_venda.Ficha %>
+</p>
+
+<%= link_to 'Edit', edit_nf_venda_path(@nf_venda) %> |
+<%= link_to 'Back', nf_vendas_path %>

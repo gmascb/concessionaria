@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numerodocumento: MyString
+  valor: 9.99
+  desconto: 9.99
+  acrescimo: 9.99
+  Ficha_id: 
+
+two:
+  numerodocumento: MyString
+  valor: 9.99
+  desconto: 9.99
+  acrescimo: 9.99
+  Ficha_id: 

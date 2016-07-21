@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Benaia Motors</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   
-  <div id="user_header">
+  <div class="user_header">
     <%if current_user %>
-      Logged in as <%= current_user.email %>
       <%= link_to "Home", page_index_path %>
       <%= link_to "Usuário", users_path %>
+      <%= link_to "Locais", locals_path %>
+      <%= link_to "Carros", cars_path %>
+      <%= link_to "Clientes", customers_path %>
+      <%= link_to "Meio Pagamento", meio_pagamentos_path %>
+      <%= link_to "Vendedores", vendedors_path %>
+      <%= link_to "Banco", bancos_path %>
+      <%= link_to "Fichas", fichas_path %>
+      <%= link_to "Conta", conta_path %>
+      <%= link_to "NFVendas", nf_vendas_path %>
       <%= link_to "Sair", logout_path %>
+      
     <% end %>
   </div>
   
@@ -22,6 +31,14 @@
       <p> <%= value %> </p>
     <% end %>
   <% end %>
+  
+  
+  <div id="rodape">
+    <%if current_user %>
+    <h1>Logged in as <%= current_user.email %></h1>
+    <% end %>
+  </div>
+  
   
 <%= yield %>
 

@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
 
 
+  resources :nf_vendas
+  resources :conta
+  resources :fichas
+  resources :bancos
+  resources :vendedors
+  resources :meio_pagamentos
+  resources :customers
+  resources :cars
+  resources :locals
   #get 'sessions/new'
   #get 'sessions/create'
   #get 'sessions/destroy'

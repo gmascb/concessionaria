@@ -1,0 +1,29 @@
+<%= form_for(@meio_pagamento) do |f| %>
+  <% if @meio_pagamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meio_pagamento.errors.count, "error") %> prohibited this meio_pagamento from being saved:</h2>
+
+      <ul>
+      <% @meio_pagamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numparcelas %><br>
+    <%= f.text_field :numparcelas %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

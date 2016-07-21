@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fichas</h1>
+
+<table>
+  <thead>
+    <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
+    <tr>
+      <th>Data</th>
+      <th>Vendedor</th>
+      <th>Banco</th>
+      <th>Tipopfin</th>
+      <th>Coef</th>
+      <th>Valfinanceiro</th>
+      <th>Numparcelas</th>
+      <th>Valorparcela</th>
+      <th>Valortotal</th>
+      <th>Customer</th>
+      <th>Cars</th>
+      <th>Meiopagamento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fichas.each do |ficha| %>
+      <tr>
+        <td><%= ficha.data %></td>
+        <td><%= ficha.Vendedor %></td>
+        <td><%= ficha.Banco %></td>
+        <td><%= ficha.tipopfin %></td>
+        <td><%= ficha.coef %></td>
+        <td><%= ficha.valfinanceiro %></td>
+        <td><%= ficha.numparcelas %></td>
+        <td><%= ficha.valorparcela %></td>
+        <td><%= ficha.valortotal %></td>
+        <td><%= ficha.Customer %></td>
+        <td><%= ficha.Cars %></td>
+        <td><%= ficha.MeioPagamento %></td>
+        <td><%= link_to 'Show', ficha %></td>
+        <td><%= link_to 'Edit', edit_ficha_path(ficha) %></td>
+        <td><%= link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha', new_ficha_path %>

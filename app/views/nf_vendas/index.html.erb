@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Nf Vendas</h1>
+
+<table>
+  <thead>
+    <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
+    <tr>
+      <th>Numerodocumento</th>
+      <th>Valor</th>
+      <th>Desconto</th>
+      <th>Acrescimo</th>
+      <th>Ficha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nf_vendas.each do |nf_venda| %>
+      <tr>
+        <td><%= nf_venda.numerodocumento %></td>
+        <td><%= nf_venda.valor %></td>
+        <td><%= nf_venda.desconto %></td>
+        <td><%= nf_venda.acrescimo %></td>
+        <td><%= nf_venda.Ficha %></td>
+        <td><%= link_to 'Show', nf_venda %></td>
+        <td><%= link_to 'Edit', edit_nf_venda_path(nf_venda) %></td>
+        <td><%= link_to 'Destroy', nf_venda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nf venda', new_nf_venda_path %>

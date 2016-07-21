@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 
+  local_id: 
+  placa: MyString
+  modelo: MyString
+  combustivel: 
+  anofabricacao: 2016-07-20
+  andomodelo: 2016-07-20
+  km: 9.99
+  valorvenda: 9.99
+
+two:
+  status: 
+  local_id: 
+  placa: MyString
+  modelo: MyString
+  combustivel: 
+  anofabricacao: 2016-07-20
+  andomodelo: 2016-07-20
+  km: 9.99
+  valorvenda: 9.99
