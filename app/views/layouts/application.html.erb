@@ -34,14 +34,12 @@
   <% end %>
   
   
-  <div id="rodape">
-    <%if current_user %>
-    <h1>Logged in as <%= current_user.email %></h1>
-    <% end %>
-  </div>
-  
-  
-<%= yield %>
+    <div id="rodape">
+      <%if current_user %>
+        <h1>Logged in as <%= current_user.email %></h1>
+      <% end %>
+    </div>
+  <%= yield %>
 
-</body>
+  </body>
 </html>

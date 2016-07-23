@@ -11,12 +11,17 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to page_index_path, notice: 'Logged in!'
     else
-      render :new
+      #render :new
+      loginFailed
     end
   end
 
   def destroy
     session[:user_id] = nil
     redirect_to root_url, notice: 'Logged out!'
+  end
+  
+  def loginFailed
+    redirect_to root_url, notice: 'Usuário ou Senha Inválida!'
   end
 end
