@@ -1,9 +1,10 @@
 body {
-  background-color: #fff;
+  background-color: #505050;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
+  color: black;
 }
 
 p, ol, ul, td {
@@ -69,5 +70,9 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+  
+  .itemMenu{
+    color:white;
   }
 }

@@ -28,7 +28,7 @@ class BancosController < ApplicationController
     @banco = Banco.new(banco_params)
 
     if @banco.save
-      redirect_to @banco, notice: 'Banco was successfully created.'
+      redirect_to @banco, notice: 'Cadastrado com Sucesso!'
     else
       render :new
     end
@@ -37,7 +37,7 @@ class BancosController < ApplicationController
   # PATCH/PUT /bancos/1
   def update
     if @banco.update(banco_params)
-      redirect_to @banco, notice: 'Banco was successfully updated.'
+      redirect_to @banco, notice: 'Banco Atualizado.'
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class BancosController < ApplicationController
   # DELETE /bancos/1
   def destroy
     @banco.destroy
-    redirect_to bancos_url, notice: 'Banco was successfully destroyed.'
+    redirect_to bancos_url, notice: 'Banco Apagado.'
   end
 
   private

@@ -13,4 +13,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( sessions.css 
                                                   scaffolds.css 
-                                                  )
+                                                  application.css)

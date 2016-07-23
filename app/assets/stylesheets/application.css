@@ -18,5 +18,53 @@
      bottom: 0;
      width: 100%;
      text-align:right;
-     font-size: 5px;
+     font-size: 4px;
+     color:white;
  }
+ 
+ 
+ .sairButton{
+     float:right;
+  
+ }
+ 
+.user_header{
+  color:white;
+/*      list-style:none; */
+/*      background: yellow; */
+/*      -moz-box-shadow:0 3px 10px 0 #ccc; */
+/*      -webkit-box-shadow:0 3px 10px 0 #ccc; */
+      /*text-shadow:0px 0px 3px #fff;*/
+         
+
+}
+
+body{
+ background-color: #505050;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #373636;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to black (black) on hover */
+li a:hover {
+    background-color: yellow;
+    color:black;
+}

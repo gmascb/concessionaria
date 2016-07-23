@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bancos</h1>
+<h1>Bancos</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
         <td><%= banco.nome %></td>
         <td><%= link_to 'Show', banco %></td>
         <td><%= link_to 'Edit', edit_banco_path(banco) %></td>
-        <td><%= link_to 'Destroy', banco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', banco, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
