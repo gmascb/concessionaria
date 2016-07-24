@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720164413) do
+ActiveRecord::Schema.define(version: 20160724042608) do
 
   create_table "bancos", force: :cascade do |t|
     t.string   "nome"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160720164413) do
     t.string   "modelo"
     t.integer  "combustivel"
     t.date     "anofabricacao"
-    t.date     "andomodelo"
+    t.date     "anomodelo"
     t.decimal  "km"
     t.decimal  "valorvenda"
     t.datetime "created_at",    null: false
@@ -38,12 +38,13 @@ ActiveRecord::Schema.define(version: 20160720164413) do
   create_table "conta", force: :cascade do |t|
     t.date     "vencimento"
     t.date     "emissao"
-    t.decimal  "valor"
     t.integer  "Ficha_id"
     t.integer  "Customer_id"
     t.string   "historico"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.date     "datapagamento"
+    t.integer  "status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "conta", ["Customer_id"], name: "index_conta_on_Customer_id"

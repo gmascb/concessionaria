@@ -18,7 +18,7 @@ class ContaControllerTest < ActionController::TestCase
 
   test "should create contum" do
     assert_difference('Contum.count') do
-      post :create, contum: { Customer_id: @contum.Customer_id, Ficha_id: @contum.Ficha_id, emissao: @contum.emissao, historico: @contum.historico, valor: @contum.valor, vencimento: @contum.vencimento }
+      post :create, contum: { Customer_id: @contum.Customer_id, Ficha_id: @contum.Ficha_id, datapagamento: @contum.datapagamento, emissao: @contum.emissao, historico: @contum.historico, status: @contum.status, vencimento: @contum.vencimento }
     end
 
     assert_redirected_to contum_path(assigns(:contum))
@@ -35,7 +35,7 @@ class ContaControllerTest < ActionController::TestCase
   end
 
   test "should update contum" do
-    patch :update, id: @contum, contum: { Customer_id: @contum.Customer_id, Ficha_id: @contum.Ficha_id, emissao: @contum.emissao, historico: @contum.historico, valor: @contum.valor, vencimento: @contum.vencimento }
+    patch :update, id: @contum, contum: { Customer_id: @contum.Customer_id, Ficha_id: @contum.Ficha_id, datapagamento: @contum.datapagamento, emissao: @contum.emissao, historico: @contum.historico, status: @contum.status, vencimento: @contum.vencimento }
     assert_redirected_to contum_path(assigns(:contum))
   end
 

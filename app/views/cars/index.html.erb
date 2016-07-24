@@ -22,12 +22,12 @@
     <% @cars.each do |car| %>
       <tr>
         <td><%= car.status %></td>
-        <td><%= car.local %></td>
+        <td><%= car.local.descricao %></td>
         <td><%= car.placa %></td>
         <td><%= car.modelo %></td>
         <td><%= car.combustivel %></td>
         <td><%= car.anofabricacao %></td>
-        <td><%= car.andomodelo %></td>
+        <td><%= car.anomodelo %></td>
         <td><%= car.km %></td>
         <td><%= car.valorvenda %></td>
         <td><%= link_to 'Show', car %></td>

@@ -28,13 +28,16 @@
     <%= f.text_field :cpfcnpj %>
   </div>
   <div class="field">
-    <%= f.label :clioufor %><br>
-    <%= f.text_field :clioufor %>
+    <%= f.label 'Cliente ou Fornecedor' %><br>
+    <%= f.select(:clioufor, 
+    options_for_select([["Cliente","1"], ["Fornecedor","2"], ["Ambos","3"]]),
+    {include_blank: true})%>
   </div>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

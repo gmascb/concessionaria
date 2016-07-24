@@ -3,11 +3,7 @@ class ContaController < ApplicationController
 
   # GET /conta
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @conta = Contum.all
-    end
+    @conta = Contum.all
   end
 
   # GET /conta/1
@@ -57,6 +53,6 @@ class ContaController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def contum_params
-      params.require(:contum).permit(:vencimento, :emissao, :valor, :Ficha_id, :Customer_id, :historico)
+      params.require(:contum).permit(:vencimento, :emissao, :Ficha_id, :Customer_id, :historico, :datapagamento, :status)
     end
 end

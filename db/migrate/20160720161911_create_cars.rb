@@ -7,7 +7,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :modelo
       t.integer :combustivel
       t.date :anofabricacao
-      t.date :andomodelo
+      t.date :anomodelo
       t.decimal :km
       t.decimal :valorvenda
 

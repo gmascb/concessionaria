@@ -23,7 +23,7 @@
  }
  
  
- .sairButton{
+ #sairButton{
      float:right;
   
  }
@@ -34,9 +34,7 @@
 /*      background: yellow; */
 /*      -moz-box-shadow:0 3px 10px 0 #ccc; */
 /*      -webkit-box-shadow:0 3px 10px 0 #ccc; */
-      /*text-shadow:0px 0px 3px #fff;*/
-         
-
+/*      text-shadow:0px 0px 3px #fff;*/
 }
 
 body{

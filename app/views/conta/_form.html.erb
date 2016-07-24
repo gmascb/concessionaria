@@ -11,30 +11,37 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :vencimento %><br>
-    <%= f.date_select :vencimento %>
+    <%= f.label :status %><br>
+    <%=select("Status", "Status", ['Aberto','Baixado'], {include_blank: true})%>
+  </div>
+    <div class="field">
+    <%= f.label :Customer_id %><br>
+    <%= select("Customer", "Customer", Customer.all.collect {|p| [ p.nome, p.id] }, {include_blank: ''}) %>
   </div>
   <div class="field">
     <%= f.label :emissao %><br>
     <%= f.date_select :emissao %>
   </div>
   <div class="field">
-    <%= f.label :valor %><br>
-    <%= f.text_field :valor %>
+    <%= f.label :vencimento %><br>
+    <%= f.date_select :vencimento %>
   </div>
   <div class="field">
     <%= f.label :Ficha_id %><br>
     <%= f.text_field :Ficha_id %>
   </div>
-  <div class="field">
-    <%= f.label :Customer_id %><br>
-    <%= f.text_field :Customer_id %>
-  </div>
+
   <div class="field">
     <%= f.label :historico %><br>
     <%= f.text_field :historico %>
   </div>
+  <div class="field">
+    <%= f.label :datapagamento %><br>
+    <%= f.date_select :datapagamento %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

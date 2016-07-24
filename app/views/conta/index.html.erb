@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contas</h1>
+<h1>Listing Conta</h1>
 
 <table>
   <thead>
-    <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
     <tr>
       <th>Vencimento</th>
       <th>Emissao</th>
-      <th>Valor</th>
       <th>Ficha</th>
       <th>Customer</th>
       <th>Historico</th>
+      <th>Datapagamento</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,10 +21,11 @@
       <tr>
         <td><%= contum.vencimento %></td>
         <td><%= contum.emissao %></td>
-        <td><%= contum.valor %></td>
         <td><%= contum.Ficha %></td>
         <td><%= contum.Customer %></td>
         <td><%= contum.historico %></td>
+        <td><%= contum.datapagamento %></td>
+        <td><%= contum.status %></td>
         <td><%= link_to 'Show', contum %></td>
         <td><%= link_to 'Edit', edit_contum_path(contum) %></td>
         <td><%= link_to 'Destroy', contum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

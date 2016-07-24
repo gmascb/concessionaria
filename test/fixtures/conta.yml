@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  vencimento: 2016-07-20
-  emissao: 2016-07-20
-  valor: 9.99
+  vencimento: 2016-07-24
+  emissao: 2016-07-24
   Ficha_id: 
   Customer_id: 
   historico: MyString
+  datapagamento: 2016-07-24
+  status: 1
 
 two:
-  vencimento: 2016-07-20
-  emissao: 2016-07-20
-  valor: 9.99
+  vencimento: 2016-07-24
+  emissao: 2016-07-24
   Ficha_id: 
   Customer_id: 
   historico: MyString
+  datapagamento: 2016-07-24
+  status: 1

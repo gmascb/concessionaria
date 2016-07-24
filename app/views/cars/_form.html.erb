@@ -1,7 +1,7 @@
 <%= form_for(@car) do |f| %>
   <% if @car.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+      <h2><%= pluralize(@car.errors.count, "error") %> Não foi possível salvar.</h2>
 
       <ul>
       <% @car.errors.full_messages.each do |message| %>
@@ -13,11 +13,13 @@
 
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.select(:status, 
+    options_for_select([["Consignado","1"], ["Vendido","2"], ["Em Negociacao","3"]]),
+    {include_blank: true})%>
   </div>
   <div class="field">
     <%= f.label :local_id %><br>
-    <%= f.text_field :local_id %>
+    <%= f.select(:local_id, Local.all.collect {|p| [ p.descricao, p.id ] }, {include_blank: 'Sem Local'})%>
   </div>
   <div class="field">
     <%= f.label :placa %><br>
@@ -29,24 +31,27 @@
   </div>
   <div class="field">
     <%= f.label :combustivel %><br>
-    <%= f.text_field :combustivel %>
+    <%= f.select(:combustivel, 
+    options_for_select([["Etanol","1"], ["Gasolina","2"], ["Flex","3"]]),
+    {include_blank: true})%>
   </div>
   <div class="field">
-    <%= f.label :anofabricacao %><br>
+    <%= f.label 'Ano de Fabricacao' %><br>
     <%= f.date_select :anofabricacao %>
   </div>
   <div class="field">
-    <%= f.label :andomodelo %><br>
-    <%= f.date_select :andomodelo %>
+    <%= f.label 'Ano do Modelo' %><br>
+    <%= f.date_select :anomodelo %>
   </div>
   <div class="field">
-    <%= f.label :km %><br>
+    <%= f.label 'Quilometragem' %><br>
     <%= f.text_field :km %>
   </div>
   <div class="field">
     <%= f.label :valorvenda %><br>
     <%= f.text_field :valorvenda %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
