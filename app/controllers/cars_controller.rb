@@ -16,7 +16,11 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    if !current_user
+      redirect_to root_url
+    else
+      @car = Car.new
+    end
   end
 
   # GET /cars/1/edit
