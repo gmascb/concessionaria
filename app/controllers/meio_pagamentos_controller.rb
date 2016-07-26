@@ -3,24 +3,24 @@ class MeioPagamentosController < ApplicationController
 
   # GET /meio_pagamentos
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @meio_pagamentos = MeioPagamento.all
-    end
+    check_user
+    @meio_pagamentos = MeioPagamento.all
   end
 
   # GET /meio_pagamentos/1
   def show
+    check_user
   end
 
   # GET /meio_pagamentos/new
   def new
+    check_user
     @meio_pagamento = MeioPagamento.new
   end
 
   # GET /meio_pagamentos/1/edit
   def edit
+    check_user
   end
 
   # POST /meio_pagamentos

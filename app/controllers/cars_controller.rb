@@ -3,28 +3,24 @@ class CarsController < ApplicationController
 
   # GET /cars
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @cars = Car.all
-    end
+    check_user
+    @cars = Car.all
   end
 
   # GET /cars/1
   def show
+    check_user
   end
 
   # GET /cars/new
   def new
-    if !current_user
-      redirect_to root_url
-    else
-      @car = Car.new
-    end
+    check_user
+    @car = Car.new
   end
 
   # GET /cars/1/edit
   def edit
+    check_user
   end
 
   # POST /cars

@@ -3,24 +3,24 @@ class VendedorsController < ApplicationController
 
   # GET /vendedors
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @vendedors = Vendedor.all
-    end
+    check_user
+    @vendedors = Vendedor.all
   end
 
   # GET /vendedors/1
   def show
+    check_user
   end
 
   # GET /vendedors/new
   def new
+    check_user
     @vendedor = Vendedor.new
   end
 
   # GET /vendedors/1/edit
   def edit
+    check_user
   end
 
   # POST /vendedors

@@ -3,24 +3,24 @@ class LocalsController < ApplicationController
 
   # GET /locals
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @locals = Local.all
-    end
+    check_user
+    @locals = Local.all
   end
 
   # GET /locals/1
   def show
+    check_user
   end
 
   # GET /locals/new
   def new
+    check_user
     @local = Local.new
   end
 
   # GET /locals/1/edit
   def edit
+    check_user
   end
 
   # POST /locals

@@ -8,15 +8,18 @@ class ContaController < ApplicationController
 
   # GET /conta/1
   def show
+    check_user
   end
 
   # GET /conta/new
   def new
+    check_user
     @contum = Contum.new
   end
 
   # GET /conta/1/edit
   def edit
+    check_user
   end
 
   # POST /conta

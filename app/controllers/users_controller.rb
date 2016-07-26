@@ -3,30 +3,29 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    if !current_user
-      redirect_to root_url
-    else
-     @users = User.all
-   end
+    check_user
+    @users = User.all
   end
 
   # GET /users/1
   def show
+    check_user
   end
 
   # GET /users/new
   def new
+    check_user
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
+    check_user
   end
 
   # POST /users
   def create
     @user = User.new(user_params)
-
     if @user.save
       redirect_to @user, notice: 'User was successfully created.'
     else

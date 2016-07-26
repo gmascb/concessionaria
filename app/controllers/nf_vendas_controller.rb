@@ -3,24 +3,24 @@ class NfVendasController < ApplicationController
 
   # GET /nf_vendas
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @nf_vendas = NfVenda.all
-    end
+    check_user
+    @nf_vendas = NfVenda.all
   end
 
   # GET /nf_vendas/1
   def show
+    check_user
   end
 
   # GET /nf_vendas/new
   def new
+    check_user
     @nf_venda = NfVenda.new
   end
 
   # GET /nf_vendas/1/edit
   def edit
+    check_user
   end
 
   # POST /nf_vendas

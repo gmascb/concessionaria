@@ -3,24 +3,24 @@ class FichasController < ApplicationController
 
   # GET /fichas
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @fichas = Ficha.all
-    end
+    check_user
+    @fichas = Ficha.all
   end
 
   # GET /fichas/1
   def show
+    check_user
   end
 
   # GET /fichas/new
   def new
+    check_user
     @ficha = Ficha.new
   end
 
   # GET /fichas/1/edit
   def edit
+    check_user
   end
 
   # POST /fichas

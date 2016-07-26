@@ -1,26 +1,26 @@
 class BancosController < ApplicationController
-  before_action :set_banco, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_banco, only: [:show, :edit, :update, :destroy] 
+  
   # GET /bancos
   def index
-    if !current_user
-      redirect_to root_url
-    else
-      @bancos = Banco.all
-    end
+    check_user
+    @bancos = Banco.all
   end
 
   # GET /bancos/1
   def show
+    check_user
   end
 
   # GET /bancos/new
   def new
+    check_user
     @banco = Banco.new
   end
 
   # GET /bancos/1/edit
   def edit
+    check_user
   end
 
   # POST /bancos
@@ -59,4 +59,5 @@ class BancosController < ApplicationController
     def banco_params
       params.require(:banco).permit(:nome)
     end
+    
 end
