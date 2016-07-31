@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724042608) do
+ActiveRecord::Schema.define(version: 20160727162422) do
 
   create_table "bancos", force: :cascade do |t|
     t.string   "nome"
@@ -34,21 +34,6 @@ ActiveRecord::Schema.define(version: 20160724042608) do
   end
 
   add_index "cars", ["local_id"], name: "index_cars_on_local_id"
-
-  create_table "conta", force: :cascade do |t|
-    t.date     "vencimento"
-    t.date     "emissao"
-    t.integer  "Ficha_id"
-    t.integer  "Customer_id"
-    t.string   "historico"
-    t.date     "datapagamento"
-    t.integer  "status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "conta", ["Customer_id"], name: "index_conta_on_Customer_id"
-  add_index "conta", ["Ficha_id"], name: "index_conta_on_Ficha_id"
 
   create_table "customers", force: :cascade do |t|
     t.string   "nome"
@@ -83,6 +68,25 @@ ActiveRecord::Schema.define(version: 20160724042608) do
   add_index "fichas", ["Customer_id"], name: "index_fichas_on_Customer_id"
   add_index "fichas", ["MeioPagamento_id"], name: "index_fichas_on_MeioPagamento_id"
   add_index "fichas", ["Vendedor_id"], name: "index_fichas_on_Vendedor_id"
+
+  create_table "lancamentos", force: :cascade do |t|
+    t.integer  "status"
+    t.integer  "Ficha_id"
+    t.integer  "Customer_id"
+    t.date     "dtvencimento"
+    t.date     "dtemissao"
+    t.date     "dtpagamento"
+    t.string   "historico"
+    t.decimal  "valor"
+    t.decimal  "valorpago"
+    t.decimal  "acrescimo"
+    t.decimal  "desconto"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "lancamentos", ["Customer_id"], name: "index_lancamentos_on_Customer_id"
+  add_index "lancamentos", ["Ficha_id"], name: "index_lancamentos_on_Ficha_id"
 
   create_table "locals", force: :cascade do |t|
     t.string   "descricao"

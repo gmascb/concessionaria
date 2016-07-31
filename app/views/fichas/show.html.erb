@@ -7,12 +7,12 @@
 
 <p>
   <strong>Vendedor:</strong>
-  <%= @ficha.Vendedor %>
+  <%= @ficha.Vendedor.nome %>
 </p>
 
 <p>
   <strong>Banco:</strong>
-  <%= @ficha.Banco %>
+  <%= @ficha.Banco.nome %>
 </p>
 
 <p>
@@ -47,17 +47,17 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @ficha.Customer %>
+  <%= @ficha.Customer.nome %>
 </p>
 
 <p>
   <strong>Cars:</strong>
-  <%= @ficha.Cars %>
+  <%= @ficha.Cars_id %>
 </p>
 
 <p>
   <strong>Meiopagamento:</strong>
-  <%= @ficha.MeioPagamento %>
+  <%= @ficha.MeioPagamento_id %>
 </p>
 
 <%= link_to 'Edit', edit_ficha_path(@ficha) %> |

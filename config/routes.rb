@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :conta
+  resources :lancamentos
   resources :nf_vendas
   resources :fichas
   resources :bancos

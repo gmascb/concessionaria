@@ -1,0 +1,61 @@
+<%= form_for(@lancamento) do |f| %>
+  <% if @lancamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lancamento.errors.count, "error") %> prohibited this lancamento from being saved:</h2>
+
+      <ul>
+      <% @lancamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.select(:status, options_for_select([["Aberto","0"], ["Pago","1"]]))%>
+  </div>
+  <div class="field">
+    <%= f.label :Ficha_id %><br>
+    <%= f.text_field :Ficha_id %>
+  </div>
+  <div class="field">
+    <%= f.label "Cliente" %><br>
+    <%= f.select(:Customer_id, Customer.all.collect {|p| [ p.nome, p.id ] }, {include_blank: ''})%>
+  </div>
+  <div class="field">
+    <%= f.label :dtvencimento %><br>
+    <%= f.date_select :dtvencimento %>
+  </div>
+  <div class="field">
+    <%= f.label :dtemissao %><br>
+    <%= f.date_select :dtemissao %>
+  </div>
+  <div class="field">
+    <%= f.label :dtpagamento %><br>
+    <%= f.date_select :dtpagamento, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :historico %><br>
+    <%= f.text_field :historico %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :valorpago %><br>
+    <%= f.text_field :valorpago %>
+  </div>
+  <div class="field">
+    <%= f.label :acrescimo %><br>
+    <%= f.text_field :acrescimo %>
+  </div>
+  <div class="field">
+    <%= f.label :desconto %><br>
+    <%= f.text_field :desconto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

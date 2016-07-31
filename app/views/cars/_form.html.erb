@@ -14,12 +14,12 @@
   <div class="field">
     <%= f.label :status %><br>
     <%= f.select(:status, 
-    options_for_select([["Consignado","1"], ["Vendido","2"], ["Em Negociacao","3"]]),
+    options_for_select([["Consignado","1"], ["Vendido","2"], ["Em Negociacao","3"], ["Disponível","4"]], @car.status),
     {include_blank: true})%>
   </div>
   <div class="field">
     <%= f.label :local_id %><br>
-    <%= f.select(:local_id, Local.all.collect {|p| [ p.descricao, p.id ] }, {include_blank: 'Sem Local'})%>
+    <%= f.select(:local_id, Local.all.collect {|p| [ p.descricao, p.id ]},{include_blank: 'Sem Local'})%>
   </div>
   <div class="field">
     <%= f.label :placa %><br>
@@ -32,7 +32,7 @@
   <div class="field">
     <%= f.label :combustivel %><br>
     <%= f.select(:combustivel, 
-    options_for_select([["Etanol","1"], ["Gasolina","2"], ["Flex","3"]]),
+    options_for_select([["Etanol","1"], ["Gasolina","2"], ["Flex","3"]], @car.combustivel),
     {include_blank: true})%>
   </div>
   <div class="field">

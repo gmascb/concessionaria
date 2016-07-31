@@ -9,6 +9,7 @@ class FichasController < ApplicationController
 
   # GET /fichas/1
   def show
+    @ficha = Ficha.all.find(params[:id])
     check_user
   end
 
@@ -16,10 +17,20 @@ class FichasController < ApplicationController
   def new
     check_user
     @ficha = Ficha.new
+
+    if params.has_key?(:carro)
+      carro = Car.find(params[:carro]) 
+      @ficha.Cars_id = carro.id
+      @ficha.valfinanceiro = carro.valorvenda
+      @ficha.valortotal = carro.valorvenda
+    end
+    
   end
+  
 
   # GET /fichas/1/edit
   def edit
+    @ficha = Ficha.all.find(params[:id])
     check_user
   end
 

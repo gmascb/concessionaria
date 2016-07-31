@@ -19,50 +19,50 @@
      width: 100%;
      text-align:right;
      font-size: 4px;
-     color:white;
+     color:black;
  }
  
+ .header{
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ }
  
  #sairButton{
      float:right;
   
  }
  
-.user_header{
-  color:white;
-/*      list-style:none; */
-/*      background: yellow; */
-/*      -moz-box-shadow:0 3px 10px 0 #ccc; */
-/*      -webkit-box-shadow:0 3px 10px 0 #ccc; */
-/*      text-shadow:0px 0px 3px #fff;*/
+ /*Change the link color to black (black) on hover */
+li a:hover {
+    background-color: yellow;
+    color:black;
+    
+}
+
+li a {
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+ li a:hover {
+    background-color: #DAA520;
+    color:black;
 }
 
 body{
- background-color: white;
+ background-color: #DCDCDC;
 }
-
+ 
+li {
+    float: left;
+}
+ 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #373636;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to black (black) on hover */
-li a:hover {
-    background-color: yellow;
-    color:black;
+    background-color: black;
 }

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  Ficha_id: 
+  Customer_id: 
+  dtvencimento: 2016-07-27
+  dtemissao: 2016-07-27
+  dtpagamento: 2016-07-27
+  historico: MyString
+  valor: 9.99
+  valorpago: 9.99
+  acrescimo: 9.99
+  desconto: 9.99
+
+two:
+  status: 1
+  Ficha_id: 
+  Customer_id: 
+  dtvencimento: 2016-07-27
+  dtemissao: 2016-07-27
+  dtpagamento: 2016-07-27
+  historico: MyString
+  valor: 9.99
+  valorpago: 9.99
+  acrescimo: 9.99
+  desconto: 9.99

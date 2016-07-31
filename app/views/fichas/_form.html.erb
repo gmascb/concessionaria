@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :Vendedor_id %><br>
-    <%= f.text_field :Vendedor_id %>
+    <%= f.select(:Vendedor_id, Vendedor.all.collect {|p| [ p.nome, p.id ] }, {include_blank: 'Não Definido'})%>
   </div>
   <div class="field">
     <%= f.label :Banco_id %><br>
-    <%= f.text_field :Banco_id %>
+        <%= f.select(:Banco_id, Banco.all.collect {|p| [ p.nome, p.id ] }, {include_blank: 'Não Definido'})%>
   </div>
   <div class="field">
     <%= f.label :tipopfin %><br>
-    <%= f.text_field :tipopfin %>
+    <%= f.select(:tipopfin, options_for_select([["Venda","0"], ["Compra","1"]]))%>
   </div>
   <div class="field">
     <%= f.label :coef %><br>
@@ -49,15 +49,15 @@
   </div>
   <div class="field">
     <%= f.label :Customer_id %><br>
-    <%= f.text_field :Customer_id %>
+    <%= f.select(:Customer_id, Customer.all.collect {|p| [ p.nome, p.id ] }, {include_blank: 'Não Definido'})%>
   </div>
   <div class="field">
     <%= f.label :Cars_id %><br>
-    <%= f.text_field :Cars_id %>
+    <%= f.select(:Cars_id, Car.all.collect {|p| [ p.modelo, p.id ] }, {include_blank: 'Não Definido'})%>
   </div>
   <div class="field">
     <%= f.label :MeioPagamento_id %><br>
-    <%= f.text_field :MeioPagamento_id %>
+    <%= f.select(:MeioPagamento_id, MeioPagamento.all.collect {|p| [ p.descricao, p.id ] }, {include_blank: 'Não Definido'})%>
   </div>
   <div class="actions">
     <%= f.submit %>

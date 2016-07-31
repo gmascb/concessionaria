@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
-
+<div class="header">
 <h1>Fichas</h1>
-
+</div>
 <table>
   <thead>
     <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
+    <p id="notice"><%= notice %></p>
     <tr>
       <th>Data</th>
       <th>Vendedor</th>
@@ -26,17 +26,17 @@
     <% @fichas.each do |ficha| %>
       <tr>
         <td><%= ficha.data %></td>
-        <td><%= ficha.Vendedor %></td>
-        <td><%= ficha.Banco %></td>
+        <td><%= ficha.Vendedor.nome %></td>
+        <td><%= ficha.Banco.nome %></td>
         <td><%= ficha.tipopfin %></td>
         <td><%= ficha.coef %></td>
         <td><%= ficha.valfinanceiro %></td>
         <td><%= ficha.numparcelas %></td>
         <td><%= ficha.valorparcela %></td>
         <td><%= ficha.valortotal %></td>
-        <td><%= ficha.Customer %></td>
-        <td><%= ficha.Cars %></td>
-        <td><%= ficha.MeioPagamento %></td>
+        <td><%= ficha.Customer.nome %></td>
+        <td><%= ficha.Cars_id %></td>
+        <td><%= ficha.MeioPagamento_id %></td>
         <td><%= link_to 'Show', ficha %></td>
         <td><%= link_to 'Edit', edit_ficha_path(ficha) %></td>
         <td><%= link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>

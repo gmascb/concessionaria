@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @lancamento.status %>
+</p>
+
+<p>
+  <strong>Ficha:</strong>
+  <%= @lancamento.Ficha %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @lancamento.Customer.nome %>
+</p>
+
+<p>
+  <strong>Dtvencimento:</strong>
+  <%= @lancamento.dtvencimento %>
+</p>
+
+<p>
+  <strong>Dtemissao:</strong>
+  <%= @lancamento.dtemissao %>
+</p>
+
+<p>
+  <strong>Dtpagamento:</strong>
+  <%= @lancamento.dtpagamento %>
+</p>
+
+<p>
+  <strong>Historico:</strong>
+  <%= @lancamento.historico %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @lancamento.valor %>
+</p>
+
+<p>
+  <strong>Valorpago:</strong>
+  <%= @lancamento.valorpago %>
+</p>
+
+<p>
+  <strong>Acrescimo:</strong>
+  <%= @lancamento.acrescimo %>
+</p>
+
+<p>
+  <strong>Desconto:</strong>
+  <%= @lancamento.desconto %>
+</p>
+
+<%= link_to 'Edit', edit_lancamento_path(@lancamento) %> |
+<%= link_to 'Back', lancamentos_path %>

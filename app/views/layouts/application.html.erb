@@ -12,20 +12,22 @@
     <%if current_user %>
       <ul>
         <li><%= link_to "Home", page_index_path %></li>
-        <li><%= link_to "Usuário", users_path %></li>
-        <li><%= link_to "Locais", locals_path %></li>
         <li><%= link_to "Carros", cars_path %></li>
+        <li><%= link_to "Fichas", fichas_path %></li>
+        <li><%= link_to "Lançamentos", lancamentos_path %></li>
+        <li><%= link_to "NFVendas", nf_vendas_path %></li>
+        <li><%= link_to "Locais", locals_path %></li>
         <li><%= link_to "Clientes", customers_path %></li>
         <li><%= link_to "Meio Pagamento", meio_pagamentos_path %></li>
-        <li><%= link_to "Vendedores", vendedors_path %></li>
         <li><%= link_to "Banco", bancos_path %></li>
-        <li><%= link_to "Fichas", fichas_path %></li>
-        <li><%= link_to "Conta", conta_path %></li>
-        <li><%= link_to "NFVendas", nf_vendas_path %></li>
+        <li><%= link_to "Vendedores", vendedors_path %></li>
+        <li><%= link_to "Usuário", users_path %></li>
         <li id="sairButton"><%= link_to "Sair", logout_path %></li>
       </ul>
     <% end %>
   </div>
+
+  
   
   <% flash.each do |key, value| %>
     <%= content_tag(:div, class: "alert alert-#{key}") do %>
@@ -40,6 +42,5 @@
       <% end %>
     </div>
   <%= yield %>
-
   </body>
 </html>
