@@ -1,41 +1,47 @@
 <div class="header">
   <h1>Carros</h1>
 </div>
+<br/>
+  <%= form_tag(cars_path, :method => :get) do %>
+  <%= text_field_tag 'search', nil, placeholder: 'Modelo' %>
+  <%= submit_tag "Pesquisar" %>
+  <%end%>
 <table>
   <thead>
     <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
     <p id="notice"><%= notice %></p>
-    <tr>
-      <th>Status</th>
-      <th>Local</th>
-      <th>Placa</th>
-      <th>Modelo</th>
-      <th>Combustivel</th>
-      <th>Anofabricacao</th>
-      <th>Andomodelo</th>
-      <th>Km</th>
-      <th>Valorvenda</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cars.each do |car| %>
+    <table id="t01">
       <tr>
-        <td><%= car.status %></td>
-        <td><%= car.local.descricao %></td>
-        <td><%= car.placa %></td>
-        <td><%= car.modelo %></td>
-        <td><%= car.combustivel %></td>
-        <td><%= car.anofabricacao %></td>
-        <td><%= car.anomodelo %></td>
-        <td><%= car.km %></td>
-        <td><%= car.valorvenda %></td>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Status</th>
+        <th>Local</th>
+        <th>Placa</th>
+        <th>Modelo</th>
+        <th>Combustivel</th>
+        <th>Anofabricacao</th>
+        <th>Andomodelo</th>
+        <th>Km</th>
+        <th>Valorvenda</th>
+        <th colspan="3"></th>
       </tr>
+  </thead>
+  <tbody>
+      <% @cars.each do |car| %>
+        <tr>
+          <td><%= car.status %></td>
+          <td><%= car.local.descricao %></td>
+          <td><%= car.placa %></td>
+          <td><%= car.modelo %></td>
+          <td><%= car.combustivel %></td>
+          <td><%= car.anofabricacao %></td>
+          <td><%= car.anomodelo %></td>
+          <td><%= car.km %></td>
+          <td><%= car.valorvenda %></td>
+          <td><%= link_to 'Show', car %></td>
+          <td><%= link_to 'Edit', edit_car_path(car) %></td>
+          <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
     <% end %>
+    </table>
   </tbody>
 </table>
 

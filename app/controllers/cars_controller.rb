@@ -4,7 +4,11 @@ class CarsController < ApplicationController
   # GET /cars
   def index
     check_user
-    @cars = Car.all
+    if params[:search] && params[:search] != ''
+      @cars = Car.where(modelo: params[:search])
+    else
+      @cars = Car.all
+    end
   end
 
   # GET /cars/1
