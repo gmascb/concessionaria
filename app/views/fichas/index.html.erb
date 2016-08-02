@@ -4,7 +4,6 @@
 <table id="t01">
   <thead>
     <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
-    <p id="notice"><%= notice %></p>
     <tr>
       <th>Data</th>
       <th>Vendedor</th>
@@ -34,7 +33,7 @@
         <td><%= ficha.numparcelas %></td>
         <td><%= ficha.valorparcela %></td>
         <td><%= ficha.valortotal %></td>
-        <td><%= ficha.Customer.nome %></td>
+        <td><%= ficha.Customer.nome%></td>
         <td><%= ficha.Cars_id %></td>
         <td><%= ficha.MeioPagamento_id %></td>
         <td><%= link_to 'Show', ficha %></td>

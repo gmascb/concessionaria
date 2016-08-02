@@ -1,15 +1,14 @@
 <div class="header">
   <h1>Carros</h1>
 </div>
+  <table>
 <br/>
   <%= form_tag(cars_path, :method => :get) do %>
   <%= text_field_tag 'search', nil, placeholder: 'Modelo' %>
   <%= submit_tag "Pesquisar" %>
   <%end%>
-<table>
   <thead>
     <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
-    <p id="notice"><%= notice %></p>
     <table id="t01">
       <tr>
         <th>Status</th>
@@ -44,7 +43,5 @@
     </table>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Car', new_car_path %>
+<br/>
+<%= button_to t('New'), new_car_path,:method => :get %>

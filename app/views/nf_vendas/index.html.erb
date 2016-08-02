@@ -21,7 +21,7 @@
         <td><%= nf_venda.valor %></td>
         <td><%= nf_venda.desconto %></td>
         <td><%= nf_venda.acrescimo %></td>
-        <td><%= nf_venda.Ficha %></td>
+        <td><%= nf_venda.Ficha_id %></td>
         <td><%= link_to 'Show', nf_venda %></td>
         <td><%= link_to 'Edit', edit_nf_venda_path(nf_venda) %></td>
         <td><%= link_to 'Destroy', nf_venda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Nf venda', new_nf_venda_path %>
+<%= link_to t('New')+' Nf venda', new_nf_venda_path %>
