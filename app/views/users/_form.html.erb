@@ -1,3 +1,8 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
+    </head>
+    <body>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -5,7 +10,7 @@
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= message %></li><br>
       <% end %>
       </ul>
     </div>
@@ -31,3 +36,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</body>
+</html>

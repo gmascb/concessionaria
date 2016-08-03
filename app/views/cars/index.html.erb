@@ -6,7 +6,7 @@
   <%= form_tag(cars_path, :method => :get) do %>
   <%= text_field_tag 'search', nil, placeholder: 'Modelo' %>
   <%= submit_tag "Pesquisar" %>
-  <%end%>
+  <% end %>
   <thead>
     <%= stylesheet_link_tag  'scaffolds', media: 'all', 'data-turbolinks-track' => true %>
     <table id="t01">
@@ -44,4 +44,5 @@
   </tbody>
 </table>
 <br/>
+
 <%= button_to t('New'), new_car_path,:method => :get %>
